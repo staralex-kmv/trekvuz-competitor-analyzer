@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Монитор конкурентов — Трек ВУЗ</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header>
+  <h1>Монитор конкурентов <span>Трек ВУЗ</span></h1>
+  <p>ИИ-анализ сервисов для абитуриентов: текст, скриншот, PDF, сайт целиком. Модель — GigaChat.</p>
+</header>
+
+<nav id="tabs">
+  <button data-tab="text" class="active">Текст</button>
+  <button data-tab="image">Изображение</button>
+  <button data-tab="pdf">PDF</button>
+  <button data-tab="parse">Парсинг сайта</button>
+  <button data-tab="history">История</button>
+</nav>
+
+<main>
+  <section id="tab-text" class="tab active">
+    <input id="text-competitor" placeholder="Конкурент (например, ВУЗопедия)">
+    <textarea id="text-input" rows="8" placeholder="Вставьте описание продукта, тарифы или текст лендинга конкурента"></textarea>
+    <button class="primary" id="text-go">Проанализировать</button>
+  </section>
+
+  <section id="tab-image" class="tab">
+    <input id="image-competitor" placeholder="Конкурент">
+    <input id="image-file" type="file" accept=".png,.jpg,.jpeg">
+    <button class="primary" id="image-go">Проанализировать скриншот</button>
+  </section>
+
+  <section id="tab-pdf" class="tab">
+    <input id="pdf-competitor" placeholder="Конкурент">
+    <input id="pdf-file" type="file" accept=".pdf">
+    <button class="primary" id="pdf-go">Проанализировать PDF</button>
+  </section>
+
+  <section id="tab-parse" class="tab">
+    <input id="parse-url" placeholder="https://… (пусто — все конкуренты из config.py)">
+    <input id="parse-competitor" placeholder="Название конкурента">
+    <div id="competitor-list" class="chips"></div>
+    <button class="primary" id="parse-go">Открыть в Chrome и проанализировать</button>
+  </section>
+
+  <section id="tab-history" class="tab">
+    <div class="row"><button id="history-refresh">Обновить</button><button id="history-clear" class="danger">Очистить</button></div>
+    <div id="history-list"></div>
+  </section>
+
+  <div id="progress" hidden><div class="bar"></div><span id="progress-text">Анализ…</span></div>
+  <div id="error" hidden></div>
+  <div id="result"></div>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

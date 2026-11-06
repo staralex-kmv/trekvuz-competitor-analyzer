@@ -1,0 +1,10 @@
+# секреты
+.env
+# окружение и сборка
+.venv/
+__pycache__/
+build/
+dist/
+*.spec
+*.log
+.DS_Store

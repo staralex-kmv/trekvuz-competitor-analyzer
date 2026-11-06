@@ -1,0 +1,3 @@
+.cls-1 { fill: #000000; } .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 { fill-rule: evenodd; } .cls-2 { fill: #1a7bc0; } .cls-3 { fill: #f1452e; } .cls-4 { fill: #22bdf6; } .cls-5 { fill: #fff; }
+Сайт Поступи Онлайн (postupi.online) доступен БЕЗ VPN, просим отключить на время использования
+Спасибо за понимание
