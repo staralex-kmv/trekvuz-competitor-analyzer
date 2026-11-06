@@ -8,6 +8,8 @@ on:
 jobs:
   windows:
     runs-on: windows-latest
+    env:
+      PYTHONUTF8: "1"  # консоль Windows в cp1252 — без этого падает print с кириллицей
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
