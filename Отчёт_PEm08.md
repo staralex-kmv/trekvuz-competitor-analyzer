@@ -1,7 +1,7 @@
 # ДЗ: персональный AI-анализатор рынка конкурентов
 
 **Ниша:** сервисы подбора вуза для абитуриентов. **Мой продукт:** «Трек ВУЗ» — бот в Telegram и MAX: платное исследование поступления по официальным документам вузов.
-**Код:** в этой же папке, готов к публикации на GitHub (README, `.gitignore`, `.env.example`).
+**Код:** https://github.com/staralex-kmv/trekvuz-competitor-analyzer (README, `.gitignore`, `.env.example`).
 
 Всё сделано вживую и бесплатно. Вместо GPT-4o и Proxy API — GigaChat (тариф Freemium), он понимает и текст, и изображения. Структура проекта повторяет урок: `models/`, `services/`, `frontend/`, `main.py`, `run.py`, `build.py`.
 
@@ -35,8 +35,8 @@
 ## Шаг 5. Сборка и публикация
 Написал desktop-приложение на PyQt6 с теми же пятью вкладками, что на сайте, и собрал его через `build.py` (PyInstaller) в один файл на 40 МБ. Проверил сборку изнутри: GigaChat отвечает, Selenium открывает сайт, анализ скриншота работает. Сборка поначалу падала: Selenium подгружает драйверы лениво, и PyInstaller их не видел — помог флаг `--collect-all selenium`.
 
-`.exe` на Mac не собрать: PyInstaller не делает кросс-сборку. Поэтому добавил workflow GitHub Actions, который соберёт `competition_monitor.exe` на Windows после публикации репозитория.
+`.exe` на Mac не собрать: PyInstaller не делает кросс-сборку. Поэтому добавил workflow GitHub Actions, который собирает `competition_monitor.exe` на Windows.
 
-Репозиторий подготовлен, но не опубликован. Пробный `git add` показал, что ключей в нём нет, а `.env` закрыт в `.gitignore`. Скриншоты веб- и desktop-версии — файлы `1_веб_парсинг_Поступашкин.png` и `2_desktop_история_Учёба.png`.
+Репозиторий опубликован: https://github.com/staralex-kmv/trekvuz-competitor-analyzer. Перед публикацией проверил, что ключей в нём нет, а `.env` закрыт в `.gitignore`. Скриншоты веб- и desktop-версии — файлы `1_веб_парсинг_Поступашкин.png` и `2_desktop_история_Учёба.png`.
 
 *Код писал Claude Code по тем же формулировкам задач, что давались Cursor в уроке.*
